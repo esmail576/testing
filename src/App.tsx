@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { OverviewSection } from "@/components/OverviewSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { SolutionSection } from "@/components/SolutionSection";
+import { PitchDemoSection } from "@/components/PitchDemoSection";
 import { ScreensSection } from "@/components/ScreensSection";
 import { TechStackSection } from "@/components/TechStackSection";
 import { AIArchitectureSection } from "@/components/AIArchitectureSection";
@@ -21,6 +22,7 @@ export default function App() {
         <OverviewSection />
         <FeaturesSection />
         <SolutionSection />
+        <PitchDemoSection />
         <ScreenshotsSection />
         <ScreensSection />
         <TechStackSection />

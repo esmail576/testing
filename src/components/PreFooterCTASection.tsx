@@ -102,9 +102,7 @@ export function PreFooterCTASection() {
                 transition={{ duration: 0.6, delay: 0.12 }}
                 className="text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-[1.12] tracking-tight text-foreground"
               >
-                Explore Bahrain{" "}
-                <span className="text-foreground">confidently</span>{" "}
-                <span className="font-semibold text-slate-400">with SiyahaBH</span>
+                The entire soul of Bahrain in the palm of your hands
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 12 }}

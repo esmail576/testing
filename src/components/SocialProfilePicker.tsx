@@ -8,7 +8,11 @@ type SocialProfilePickerProps = {
   profiles: SocialProfile[];
 };
 
-export function SocialProfilePicker({ label, icon: Icon, profiles }: SocialProfilePickerProps) {
+export function SocialProfilePicker({
+  label,
+  icon: Icon,
+  profiles = [],
+}: SocialProfilePickerProps) {
   return (
     <Popover>
       <PopoverTrigger asChild>

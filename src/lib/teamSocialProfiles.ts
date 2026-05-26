@@ -25,3 +25,7 @@ export const teamSocialProfiles: Record<SocialPlatform, SocialProfile[]> = {
     { name: "Fazil Shahbaz", href: "https://wa.me/97334543703", detail: "+973 34543703" },
   ],
 };
+
+export function getTeamSocialProfiles(platform: SocialPlatform): SocialProfile[] {
+  return teamSocialProfiles[platform] ?? [];
+}

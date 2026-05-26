@@ -6,7 +6,10 @@ import { BahrainMapGraphic } from "@/components/BahrainMapGraphic";
 import { SiyahaLogo } from "@/components/SiyahaLogo";
 import { SocialProfilePicker } from "@/components/SocialProfilePicker";
 import { CONTACT_EMAIL } from "@/lib/sendContactEmail";
-import { teamSocialProfiles } from "@/lib/teamSocialProfiles";
+import {
+  getTeamSocialProfiles,
+  type SocialPlatform,
+} from "@/lib/teamSocialProfiles";
 const TAGLINE = "AI & AR Powered Tourism Platform for Bahrain";
 
 const PHONE_NUMBERS = [
@@ -45,9 +48,13 @@ function IconWhatsApp({ className }: SVGProps<SVGSVGElement>) {
   );
 }
 
-const socialPickers = [
-  { platform: "linkedin" as const, label: "LinkedIn", icon: Linkedin },
-  { platform: "whatsapp" as const, label: "WhatsApp", icon: IconWhatsApp },
+const socialPickers: {
+  platform: SocialPlatform;
+  label: string;
+  icon: typeof Linkedin;
+}[] = [
+  { platform: "linkedin", label: "LinkedIn", icon: Linkedin },
+  { platform: "whatsapp", label: "WhatsApp", icon: IconWhatsApp },
 ];
 
 export function ContactSection() {
@@ -79,7 +86,7 @@ export function ContactSection() {
                       key={platform}
                       label={label}
                       icon={icon}
-                      profiles={teamSocialProfiles[platform]}
+                      profiles={getTeamSocialProfiles(platform)}
                     />
                   ))}
                 </div>
